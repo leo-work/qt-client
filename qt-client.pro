@@ -24,8 +24,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += ./src/main.cpp\
-        ./src/widgets/logindialog.cpp
+        ./src/widgets/logindialog.cpp\
+        ./src/iconhelper.cpp
 
-HEADERS  += ./src/widgets/logindialog.h
+HEADERS  += ./src/widgets/logindialog.h\
+            ./src/iconhelper.h\
+            ./src/myhelper.h
 
 FORMS    += ./src/ui/logindialog.ui
+
