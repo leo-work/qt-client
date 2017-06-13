@@ -1,2 +1,10 @@
 *.pro.user
 *.txt
+Debug
+Makefile
+ui_*
+*.build
+qt-client.xcodeproj
+moc_*
+*.plist
+*.stash
