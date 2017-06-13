@@ -1,0 +1,26 @@
+{
+  "name": "qt-client.git",
+  "version": "1.0.0",
+  "description": "qt client !",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leosex/qt-client.git"
+  },
+  "keywords": [
+    "qt",
+    "leo"
+  ],
+  "author": "leo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leosex/qt-client/issues"
+  },
+  "homepage": "https://github.com/leosex/qt-client#readme"
+}
