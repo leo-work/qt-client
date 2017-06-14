@@ -13,3 +13,4 @@ moc_*
 *.plist
 *.stash
 qt-client.vcxproj*
+*sdf
