@@ -274,6 +274,12 @@
       </property>
       <item row="0" column="0">
        <widget class="QWidget" name="widget_2" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="minimumSize">
          <size>
           <width>200</width>
@@ -290,36 +296,86 @@
       </item>
       <item row="0" column="1">
        <widget class="QWidget" name="widget_Theme" native="true">
-        <widget class="QListWidget" name="listWidget_Theme">
-         <property name="geometry">
-          <rect>
-           <x>600</x>
-           <y>0</y>
-           <width>91</width>
-           <height>121</height>
-          </rect>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <property name="spacing">
+          <number>0</number>
          </property>
-         <item>
-          <property name="text">
-           <string>blue</string>
-          </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item alignment="Qt::AlignRight|Qt::AlignTop">
+          <widget class="QListWidget" name="listWidget_Theme">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>140</width>
+             <height>180</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>140</width>
+             <height>180</height>
+            </size>
+           </property>
+           <property name="sizeIncrement">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="baseSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">margin-right:30px;</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>blue</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>gray</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>black</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>navy</string>
+            </property>
+           </item>
+          </widget>
          </item>
-         <item>
-          <property name="text">
-           <string>gray</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>black</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>navy</string>
-          </property>
-         </item>
-        </widget>
+        </layout>
        </widget>
       </item>
      </layout>

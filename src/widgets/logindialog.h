@@ -49,7 +49,6 @@ private:
 
     QPoint dragPosition;
     Direction dir;
-    bool isListWedgitThemeShow;
 protected:
 	bool eventFilter(QObject *obj, QEvent *event);
 	void mouseReleaseEvent(QMouseEvent *event);

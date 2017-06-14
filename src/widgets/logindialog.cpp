@@ -10,7 +10,6 @@ LoginDialog::LoginDialog(QWidget *parent) :
     this->InitStyle();
   	ui->listWidget_Theme->hide();
 	isLeftPressDown = false; 
-    isListWedgitThemeShow = false;
 	this->dir = NONE;
 	this->setWindowFlags(Qt::FramelessWindowHint | Qt::WindowSystemMenuHint);
 	ui->widget_title->setMouseTracking(true);
@@ -54,11 +53,9 @@ void LoginDialog::themeClicked(QListWidgetItem * item)
 
 void LoginDialog::on_btnMenu_clicked()
 {
-    if (isListWedgitThemeShow) {
-        isListWedgitThemeShow = false;
+    if (!ui->listWidget_Theme->isHidden()) {
         ui->listWidget_Theme->hide();
     } else {
-        isListWedgitThemeShow = true;
         ui->listWidget_Theme->show();
     }
 }
