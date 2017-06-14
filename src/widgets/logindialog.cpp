@@ -78,6 +78,9 @@ void LoginDialog::on_btnMenu_Close_clicked()
 
 void LoginDialog::on_btnMenu_Max_clicked()
 {
+    if (!ui->listWidget_Theme->isHidden()) {
+        ui->listWidget_Theme->hide();
+    }
     if (max) {
         this->setGeometry(location);
         IconHelper::Instance()->SetIcon(ui->btnMenu_Max, QChar(0xf096), 10);
@@ -93,6 +96,9 @@ void LoginDialog::on_btnMenu_Max_clicked()
 
 void LoginDialog::on_btnMenu_Min_clicked()
 {
+    if (!ui->listWidget_Theme->isHidden()) {
+        ui->listWidget_Theme->hide();
+    }
     this->showMinimized();
 }
 
@@ -109,6 +115,9 @@ void LoginDialog::mouseReleaseEvent(QMouseEvent *event)
 
 void LoginDialog::mousePressEvent(QMouseEvent *event)
 {
+    if (!ui->listWidget_Theme->isHidden()) {
+        ui->listWidget_Theme->hide();
+    }
 	switch (event->button()) {
 	case Qt::LeftButton:
 		isLeftPressDown = true;
@@ -209,7 +218,6 @@ void LoginDialog::region(const QPoint &cursorGlobalPoint)
 	QPoint rb = mapToGlobal(rect.bottomRight());
 	int x = cursorGlobalPoint.x();
 	int y = cursorGlobalPoint.y();
-	qDebug() << "t1=" << tl << " rb=" << rb << " x=" << x << " y=" << y;
 	if (tl.x() + PADDING >= x && tl.x() <= x && tl.y() + PADDING >= y && tl.y() <= y) {
 		// 左上角
 		dir = LEFTTOP;
