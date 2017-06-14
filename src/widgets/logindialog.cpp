@@ -10,7 +10,11 @@ LoginDialog::LoginDialog(QWidget *parent) :
     myHelper::FormInCenter(this);
     this->InitStyle();
   	ui->listWidget_Theme->hide();
+	isLeftPressDown = false; 
     isListWedgitThemeShow = false;
+	this->dir = NONE;
+	this->setWindowFlags(Qt::FramelessWindowHint | Qt::WindowSystemMenuHint);
+	this->setMouseTracking(true);
     connect(ui->listWidget_Theme, SIGNAL(itemClicked(QListWidgetItem *)), this, SLOT(themeClicked(QListWidgetItem *)));
 }
 
