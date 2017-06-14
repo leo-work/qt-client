@@ -1,6 +1,10 @@
 *.pro.user
 *.txt
 Debug
+debug
+Win32
+GeneratedFiles
+release
 Makefile
 ui_*
 *.build
@@ -8,3 +12,4 @@ qt-client.xcodeproj
 moc_*
 *.plist
 *.stash
+qt-client.vcxproj*
