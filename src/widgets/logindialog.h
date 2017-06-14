@@ -2,6 +2,7 @@
 #define LOGINDIALOG_H
 
 #include <QDialog>
+#include <QListWidgetItem>
 #define PADDING 0
 
 namespace Ui {
@@ -32,7 +33,8 @@ private slots:
     void on_btnMenu_Close_clicked();
     void on_btnMenu_Max_clicked();
     void on_btnMenu_Min_clicked();
-
+    void themeClicked(QListWidgetItem * item);
+    void on_btnMenu_clicked();
 private:
     Ui::LoginDialog *ui;
 
@@ -47,7 +49,7 @@ private:
 
     QPoint dragPosition;
     Direction dir;
-
+    bool isListWedgitThemeShow;
 protected:
 	bool eventFilter(QObject *obj, QEvent *event);
 	void mouseReleaseEvent(QMouseEvent *event);

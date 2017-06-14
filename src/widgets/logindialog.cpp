@@ -9,8 +9,11 @@ LoginDialog::LoginDialog(QWidget *parent) :
     ui->setupUi(this);
     myHelper::FormInCenter(this);
     this->InitStyle();
-
+  	ui->listWidget_Theme->hide();
+    isListWedgitThemeShow = false;
+    connect(ui->listWidget_Theme, SIGNAL(itemClicked(QListWidgetItem *)), this, SLOT(themeClicked(QListWidgetItem *)));
 }
+
 
 LoginDialog::~LoginDialog()
 {
@@ -34,6 +37,23 @@ void LoginDialog::InitStyle()
     IconHelper::Instance()->SetIcon(ui->btnMenu, QChar(0xf0c9), 10);
     IconHelper::Instance()->SetIcon(ui->lab_Ico, QChar(0xf015), 12);
 }
+
+void LoginDialog::themeClicked(QListWidgetItem * item)
+{
+    myHelper::SetStyle(item->text());//天蓝色风格
+}
+
+void LoginDialog::on_btnMenu_clicked()
+{
+    if (isListWedgitThemeShow) {
+        isListWedgitThemeShow = false;
+        ui->listWidget_Theme->hide();
+    } else {
+        isListWedgitThemeShow = true;
+        ui->listWidget_Theme->show();
+    }
+}
+
 
 bool LoginDialog::eventFilter(QObject *obj, QEvent *event)
 {
