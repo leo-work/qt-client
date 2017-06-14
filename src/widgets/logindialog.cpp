@@ -7,13 +7,18 @@ LoginDialog::LoginDialog(QWidget *parent) :
     ui(new Ui::LoginDialog)
 {
     ui->setupUi(this);
-    myHelper::FormInCenter(this);
     this->InitStyle();
   	ui->listWidget_Theme->hide();
 	isLeftPressDown = false; 
     isListWedgitThemeShow = false;
 	this->dir = NONE;
 	this->setWindowFlags(Qt::FramelessWindowHint | Qt::WindowSystemMenuHint);
+	ui->widget_title->setMouseTracking(true);
+	ui->widget_2->setMouseTracking(true);
+	ui->widget_Theme->setMouseTracking(true);
+	ui->widget->setMouseTracking(true);
+	ui->lab_Title->setMouseTracking(true);
+	ui->lab_Ico->setMouseTracking(true);
 	this->setMouseTracking(true);
     connect(ui->listWidget_Theme, SIGNAL(itemClicked(QListWidgetItem *)), this, SLOT(themeClicked(QListWidgetItem *)));
 }
@@ -134,8 +139,7 @@ void LoginDialog::mouseMoveEvent(QMouseEvent *event)
 	if (!isLeftPressDown) {
 		this->region(gloPoint);	
 	}
-	else {
-		
+	else {	
 		if (dir != NONE) {
 			QRect rMove(tl, rb);
 			switch (dir) {
@@ -174,9 +178,6 @@ void LoginDialog::mouseMoveEvent(QMouseEvent *event)
 				else
 					rMove.setY(gloPoint.y());
 				break;
-				/*rMove.setWidth(gloPoint.x() - tl.x());
-				rMove.setY(gloPoint.y());
-				break;*/
 			case LEFTBOTTOM:
 				rMove.setHeight(gloPoint.y() - tl.y());
 				if (rb.x() - gloPoint.x() <= this->minimumWidth())
@@ -211,7 +212,7 @@ void LoginDialog::region(const QPoint &cursorGlobalPoint)
 	QPoint rb = mapToGlobal(rect.bottomRight());
 	int x = cursorGlobalPoint.x();
 	int y = cursorGlobalPoint.y();
-
+	qDebug() << "t1=" << tl << " rb=" << rb << " x=" << x << " y=" << y;
 	if (tl.x() + PADDING >= x && tl.x() <= x && tl.y() + PADDING >= y && tl.y() <= y) {
 		// 左上角
 		dir = LEFTTOP;

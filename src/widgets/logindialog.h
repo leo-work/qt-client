@@ -3,7 +3,7 @@
 
 #include <QDialog>
 #include <QListWidgetItem>
-#define PADDING 0
+#define PADDING 1
 
 namespace Ui {
 class LoginDialog;
