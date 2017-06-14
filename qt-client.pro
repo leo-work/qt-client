@@ -33,3 +33,4 @@ HEADERS  += ./src/widgets/logindialog.h\
 
 FORMS    += ./src/ui/logindialog.ui
 
+RESOURCES  = src/res.qrc
